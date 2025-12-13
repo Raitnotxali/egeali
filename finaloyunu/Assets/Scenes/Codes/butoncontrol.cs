@@ -24,7 +24,7 @@ public class butoncontrol : MonoBehaviour
         
     }
     public void startbutton(){
-        SceneManager.LoadScene("gamescene");
+        SceneManager.LoadScene("0");
     }
     public void optionsbutton(){
         mainmenupanel.SetActive(false);
