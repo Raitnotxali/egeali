@@ -12,10 +12,10 @@ public class butoncontrol : MonoBehaviour
     void Start()
     {
     float music = PlayerPrefs.GetFloat("MusicVolume", 0);
-    float sfx = PlayerPrefs.GetFloat("SoundVolume", 0);
+    float sound = PlayerPrefs.GetFloat("SoundVolume", 0);
 
     audioMixer.SetFloat("MusicVolume", music);
-    audioMixer.SetFloat("SoundVolume", sfx);
+    audioMixer.SetFloat("SoundVolume", sound);
     }
 
     // Update is called once per frame
@@ -38,15 +38,17 @@ public class butoncontrol : MonoBehaviour
     public void quitbutton(){
         Application.Quit();
     }
-    public void SetMusicVolume(float volume)
+    public void SetMusicVolume(float value)
     {
-        audioMixer.SetFloat("MusicVolume", volume);
-        PlayerPrefs.SetFloat("MusicVolume", volume);
+        float dB = Mathf.Log10(value) * 20f;
+        audioMixer.SetFloat("MusicVolume", dB);
+        PlayerPrefs.SetFloat("MusicVolume", dB);
     }
 
-    public void SetSFXVolume(float volume)
+    public void SetSFXVolume(float value)
     {
-        audioMixer.SetFloat("SoundVolume", volume);
-        PlayerPrefs.SetFloat("SFXVolume", volume);
+        float dB = Mathf.Log10(value) * 20f;
+        audioMixer.SetFloat("SoundVolume", dB);
+        PlayerPrefs.SetFloat("SoundVolume", dB);
     }
 }
