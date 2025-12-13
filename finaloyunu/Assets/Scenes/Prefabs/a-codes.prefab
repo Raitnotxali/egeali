@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5988333885187196737}
-  - component: {fileID: 8643498840588295627}
+  - component: {fileID: 2068900673231265525}
   m_Layer: 0
   m_Name: a-codes
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8643498840588295627
+--- !u!114 &2068900673231265525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,9 +41,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2180240141215138457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faac85faf6051d24fbcf1f38403f6dc7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f1949c916cff6448b8911299c61fb8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::butoncontrol
   mainmenupanel: {fileID: 0}
   optionspanel: {fileID: 0}
+  pausepanel: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: 4a8d3b3a6f3e3fc47bfc4fb0e80a90ba, type: 2}

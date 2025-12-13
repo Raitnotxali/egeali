@@ -7,6 +7,7 @@ public class butoncontrol : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject mainmenupanel;
     public GameObject optionspanel;
+    public GameObject pausepanel;
     public AudioMixer audioMixer;
 
     void Start()
@@ -50,5 +51,20 @@ public class butoncontrol : MonoBehaviour
         float dB = Mathf.Log10(value) * 20f;
         audioMixer.SetFloat("SoundVolume", dB);
         PlayerPrefs.SetFloat("SoundVolume", dB);
+    }
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        pausepanel.SetActive(true);
+    }
+    public void ContinueGame()
+    {
+        Time.timeScale = 1f;
+        pausepanel.SetActive(false);
+    }
+    public void ReturnToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("SampleScene");
     }
 }
