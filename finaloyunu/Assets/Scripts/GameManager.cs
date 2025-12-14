@@ -1,12 +1,28 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    
+    public Button buton1;
+    public Button buton2;
+    public GameObject buton1tick;
+    public GameObject buton2tick;
+    public GameObject winpanel;
+    public bool isplaying=true;
+    public GameObject losepanel;
+    public GameObject phonescreen;
+    public AudioSource losesound;
+    public AudioSource winsound;
+    public AudioSource winsound2;
 
     [Header("💰 Genel Ekonomi")]
+    
     public int currentMoney = 0;
+    public int moneygoal = 2000;
     public TextMeshProUGUI moneyText;
 
     [Header("⏳ Zaman Sistemi")]
@@ -15,13 +31,13 @@ public class GameManager : MonoBehaviour
 
     [Header("📝 Writing Game Ayarları")]
     public int writingCurrentCount = 0;
-    public int writingDailyGoal = 10; // Telefonun aradığı hedef
+    public int writingDailyGoal = 5; // Telefonun aradığı hedef
     public int writingMoneyReward = 100;
     public float writingSpeedPenalty = 0f;
 
     [Header("📂 Matching Game Ayarları")]
     public int matchingCurrentCount = 0;
-    public int matchingDailyGoal = 10; // Telefonun aradığı hedef
+    public int matchingDailyGoal = 5; // Telefonun aradığı hedef
     public int matchingMoneyReward = 150;
 
     [Header("💻 Hack Game Ayarları")]
@@ -58,6 +74,33 @@ public class GameManager : MonoBehaviour
                 Debug.Log("MESAİ BİTTİ!");
                 // İstersen burada günü bitirebiliriz
             }
+        }
+        if (writingCurrentCount== writingDailyGoal && matchingCurrentCount==matchingDailyGoal && isplaying && currentMoney >= moneygoal)
+        {
+            winpanel.SetActive(true);
+            phonescreen.SetActive(false);
+            isplaying=false;
+            winsound.Play();
+            winsound2.Play();
+            Debug.Log("Kazandinkanka");
+        }
+        if(kalanSure<=0 && isplaying)
+        {
+            losepanel.SetActive(true);
+            phonescreen.SetActive(false);
+            isplaying=false;
+            losesound.Play();
+            Debug.Log("Kaybettinkanka");
+        }
+        if(writingCurrentCount==writingDailyGoal)
+        {
+            buton1.interactable=false;
+            buton1tick.SetActive(true);
+        }
+        if(matchingCurrentCount== matchingDailyGoal)
+        {
+            buton2.interactable=false;
+            buton2tick.SetActive(true);
         }
     }
 

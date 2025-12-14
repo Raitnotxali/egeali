@@ -5,7 +5,8 @@ public class PhoneSystem : MonoBehaviour
 {
     [Header("1. Açma Kapama Ayarı")]
     public GameObject phoneScreenUI; // Telefonun kendisi (Açılacak Panel)
-
+    bool otp = true;
+ 
     [Header("2. İçerik Textleri (Sürükle Bırak)")]
     public TextMeshProUGUI moneyText; // Para yazısı ($ 100)
     public TextMeshProUGUI timeText;  // Saat yazısı (04:59)
@@ -18,7 +19,7 @@ public class PhoneSystem : MonoBehaviour
         if (GameManager.Instance == null || !phoneScreenUI.activeSelf) return;
 
         // --- 1. PARAYI GÜNCELLE ---
-        moneyText.text = "$ " + GameManager.Instance.currentMoney.ToString();
+        moneyText.text = "2000/" + GameManager.Instance.currentMoney.ToString();
 
         // --- 2. SÜREYİ GÜNCELLE (Dakika:Saniye) ---
         int kalanSaniye = Mathf.CeilToInt(GameManager.Instance.kalanSure);
@@ -31,10 +32,10 @@ public class PhoneSystem : MonoBehaviour
         string gorevListesi = "";
 
         // Döküman Görevi (Yapılan / Hedef)
-        gorevListesi += "Döküman: " + GameManager.Instance.writingCurrentCount + " / " + GameManager.Instance.writingDailyGoal + "\n";
+        gorevListesi += "Dokuman: " + GameManager.Instance.writingCurrentCount + " / " + GameManager.Instance.writingDailyGoal + "\n";
 
         // Eşleştirme Görevi
-        gorevListesi += "Arşivleme: " + GameManager.Instance.matchingCurrentCount + " / " + GameManager.Instance.matchingDailyGoal + "\n";
+        gorevListesi += "Arsivleme: " + GameManager.Instance.matchingCurrentCount + " / " + GameManager.Instance.matchingDailyGoal + "\n";
 
   
 
@@ -48,8 +49,18 @@ public class PhoneSystem : MonoBehaviour
 
     public void OpenPhone()
     {
-        phoneScreenUI.SetActive(true);
-        phoneScreenUI.transform.SetAsLastSibling(); // En öne getir
+        if(otp)
+        {
+            otp = false;
+            phoneScreenUI.SetActive(true);
+            phoneScreenUI.transform.SetAsLastSibling(); // En öne getir
+        }
+        else
+        {
+            otp = true;
+            phoneScreenUI.SetActive(false);
+        }
+        
     }
 
     public void ClosePhone()
