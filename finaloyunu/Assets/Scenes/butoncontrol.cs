@@ -25,7 +25,7 @@ public class butoncontrol : MonoBehaviour
         
     }
     public void startbutton(){
-        SceneManager.LoadScene("0");
+        SceneManager.LoadScene("ees1");
     }
     public void optionsbutton(){
         mainmenupanel.SetActive(false);

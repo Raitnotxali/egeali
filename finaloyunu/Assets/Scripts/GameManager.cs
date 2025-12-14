@@ -2,12 +2,14 @@
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     
     public Button buton1;
+    public int currentlevel = 1;
     public Button buton2;
     public GameObject buton1tick;
     public GameObject buton2tick;
@@ -49,7 +51,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -83,6 +85,35 @@ public class GameManager : MonoBehaviour
             winsound.Play();
             winsound2.Play();
             Debug.Log("Kazandinkanka");
+            currentMoney=0;
+            matchingCurrentCount=0;
+            writingCurrentCount=0;
+            UpdateUI();
+            if (currentlevel == 1)
+            {
+                PlayerPrefs.SetInt("isLevel2Open", 1);
+                PlayerPrefs.Save();
+            }
+            else if (currentlevel == 2)
+            {
+                PlayerPrefs.SetInt("isLevel3Open", 1);
+                PlayerPrefs.Save();
+            }
+            else if (currentlevel == 3)
+            {
+                PlayerPrefs.SetInt("isLevel4Open", 1);
+                PlayerPrefs.Save();
+            }
+            else if (currentlevel == 4)
+            {
+                PlayerPrefs.SetInt("isLevel5Open", 1);
+                PlayerPrefs.Save();
+            }
+            else if (currentlevel == 5)
+            {
+                // Son seviye tamamlandı
+                SceneManager.LoadScene("finalscene");
+            }
         }
         if(kalanSure<=0 && isplaying)
         {

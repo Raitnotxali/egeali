@@ -6764,6 +6764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   buton1: {fileID: 1447943306}
+  currentlevel: 5
   buton2: {fileID: 2075124035}
   buton1tick: {fileID: 1029550324}
   buton2tick: {fileID: 146316006}
@@ -6775,16 +6776,16 @@ MonoBehaviour:
   winsound: {fileID: 711497464}
   winsound2: {fileID: 1644964111}
   currentMoney: 0
-  moneygoal: 2000
+  moneygoal: 5000
   moneyText: {fileID: 659802816}
   kalanSure: 300
   isTimeRunning: 1
   writingCurrentCount: 0
-  writingDailyGoal: 5
+  writingDailyGoal: 10
   writingMoneyReward: 100
   writingSpeedPenalty: 20
   matchingCurrentCount: 0
-  matchingDailyGoal: 5
+  matchingDailyGoal: 10
   matchingMoneyReward: 150
   hackCurrentCount: 0
   hackMoneyReward: 200
@@ -7641,6 +7642,7 @@ MonoBehaviour:
   moneyText: {fileID: 659802816}
   timeText: {fileID: 741831959}
   taskText: {fileID: 39161993}
+  moneygoal: 5000
 --- !u!212 &1433312236
 SpriteRenderer:
   m_ObjectHideFlags: 0

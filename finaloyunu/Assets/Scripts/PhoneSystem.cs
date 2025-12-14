@@ -11,6 +11,7 @@ public class PhoneSystem : MonoBehaviour
     public TextMeshProUGUI moneyText; // Para yazısı ($ 100)
     public TextMeshProUGUI timeText;  // Saat yazısı (04:59)
     public TextMeshProUGUI taskText;  // Görev Listesi (Döküman: 1/5 vb.)
+    public int moneygoal = 2000;
 
     // Update her karede çalışır, verileri anlık günceller
     void Update()
@@ -19,7 +20,7 @@ public class PhoneSystem : MonoBehaviour
         if (GameManager.Instance == null || !phoneScreenUI.activeSelf) return;
 
         // --- 1. PARAYI GÜNCELLE ---
-        moneyText.text = "2000/" + GameManager.Instance.currentMoney.ToString();
+        moneyText.text = $" {moneygoal}/{GameManager.Instance.currentMoney.ToString()}";
 
         // --- 2. SÜREYİ GÜNCELLE (Dakika:Saniye) ---
         int kalanSaniye = Mathf.CeilToInt(GameManager.Instance.kalanSure);
