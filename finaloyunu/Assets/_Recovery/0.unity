@@ -1103,6 +1103,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 831991756401285579, guid: ceb649cfbf0323b4881b86605c35a073, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 831991756401285579, guid: ceb649cfbf0323b4881b86605c35a073, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 831991756401285579, guid: ceb649cfbf0323b4881b86605c35a073, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 5636385827674677810, guid: 4a8d3b3a6f3e3fc47bfc4fb0e80a90ba, type: 2}
+    - target: {fileID: 5162990484841976623, guid: ceb649cfbf0323b4881b86605c35a073, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162990484841976623, guid: ceb649cfbf0323b4881b86605c35a073, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5890838394656938837, guid: ceb649cfbf0323b4881b86605c35a073, type: 3}
       propertyPath: m_Name
       value: musicsource
@@ -3908,6 +3928,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbb4a2a9921b62418ea874e25f8c2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MatchingManager
+  trueanswer: {fileID: 1812976180}
+  wronganswer: {fileID: 1656323094}
   filePrefab: {fileID: 653726487472161269, guid: fd417efbfd3b98948b727d06a5f392b2, type: 3}
   spawnArea: {fileID: 1327644929}
   appWindowBoundary: {fileID: 1892397202}
@@ -5416,6 +5438,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d46954f77db78242b9a55a5603b3dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HackSlot
+--- !u!1001 &1109513071
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 736624897017445670, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+      propertyPath: m_Name
+      value: soundsource (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252052858201164181, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.32063
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252052858201164181, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.79489
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252052858201164181, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252052858201164181, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252052858201164181, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252052858201164181, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252052858201164181, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252052858201164181, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252052858201164181, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252052858201164181, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842213252742763569, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: b7b4b409905040340b6d6f9e76a2da5a, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
 --- !u!1 &1110235596
 GameObject:
   m_ObjectHideFlags: 0
@@ -5542,6 +5625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506e78fbb9e7caf468f0c0a46a729130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TypingGameManager
+  wronginput: {fileID: 1656323094}
+  trueinput: {fileID: 1812976180}
   letterPrefab: {fileID: 5805347414100673832, guid: 83ceb382d6ddffc47880c55b60b42f4b, type: 3}
   spawnPoint: {fileID: 1697081564}
   centerPoint: {fileID: 1750948985}
@@ -7211,6 +7296,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AppWindow
   taskbarIconPrefab: {fileID: 1651845643}
   taskbarGrid: {fileID: 1154745038}
+--- !u!82 &1656323094 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6842213252742763569, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+  m_PrefabInstance: {fileID: 1109513071}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1689836220
 GameObject:
   m_ObjectHideFlags: 0
@@ -7614,6 +7704,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750948984}
   m_CullTransparentMesh: 1
+--- !u!82 &1812976180 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6842213252742763569, guid: 9cd3bd173959ea04d982ee59c46763ad, type: 3}
+  m_PrefabInstance: {fileID: 895419721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1834054998
 GameObject:
   m_ObjectHideFlags: 0
@@ -8665,6 +8760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bc4b79934e574409163acaae233bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HackManager
+  wronganswer: {fileID: 1656323094}
+  trueanswer: {fileID: 1812976180}
   topSlots:
   - {fileID: 1722172033}
   - {fileID: 1247138700}
@@ -9438,3 +9535,4 @@ SceneRoots:
   - {fileID: 959000140}
   - {fileID: 218841028}
   - {fileID: 895419721}
+  - {fileID: 1109513071}

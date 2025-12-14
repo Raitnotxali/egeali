@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class HackManager : MonoBehaviour
 {
+    public AudioSource wronganswer;
+    public AudioSource trueanswer;
     [Header("UI Referansları")]
     public List<HackSlot> topSlots;
     public List<HackSlot> bottomSlots;
@@ -97,6 +100,7 @@ public class HackManager : MonoBehaviour
                 secretUsed[i] = true;
                 guessUsed[i] = true;
                 correctCount++;
+                trueanswer.Play();
             }
         }
 
@@ -140,6 +144,7 @@ public class HackManager : MonoBehaviour
             if (!guessUsed[i])
             {
                 topSlots[i].SetSprite(spriteRed);
+                wronganswer.Play();
             }
         }
     }

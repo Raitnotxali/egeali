@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class TypingGameManager : MonoBehaviour
 {
+    public AudioSource wronginput;
+    public AudioSource trueinput;
     [Header("Referanslar")]
     public GameObject letterPrefab; // Harf Prefabı (MovingLetter_V2)
     public Transform spawnPoint;    // Mavi alanın sağındaki nokta
@@ -130,7 +133,7 @@ public class TypingGameManager : MonoBehaviour
     {
         Debug.Log("VURDUK!");
         currentScore++;
-
+        trueinput.Play();
         // Doğru yapınca hata serisini sıfırla
         failStreakAtZero = 0;
 
@@ -160,6 +163,7 @@ public class TypingGameManager : MonoBehaviour
     public void MissLetter(LetterMover letter)
     {
         Debug.Log("KAÇTI!");
+        wronginput.Play();
 
         // --- KAYBETME KONTROLÜ (Fail Condition) ---
         if (currentScore == 0)

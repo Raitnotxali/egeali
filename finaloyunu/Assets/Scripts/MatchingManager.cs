@@ -1,48 +1,51 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MatchingManager : MonoBehaviour
 {
     public static MatchingManager Instance;
+    public AudioSource trueanswer;
+    public AudioSource wronganswer;
 
     [Header("Ayarlar")]
-    public GameObject filePrefab;   // Dosya Prefabý
-    public Transform spawnArea;     // Dosyalarýn doðacaðý Kýrmýzý Alan
-    public RectTransform appWindowBoundary; // Dosyalarýn dýþýna çýkamayacaðý ANA PENCERE
-    public int startFileCount = 5;  // Ýlk baþta kaç dosya olsun?
+    public GameObject filePrefab;   // Dosya Prefabï¿½
+    public Transform spawnArea;     // Dosyalarï¿½n doï¿½acaï¿½ï¿½ Kï¿½rmï¿½zï¿½ Alan
+    public RectTransform appWindowBoundary; // Dosyalarï¿½n dï¿½ï¿½ï¿½na ï¿½ï¿½kamayacaï¿½ï¿½ ANA PENCERE
+    public int startFileCount = 5;  // ï¿½lk baï¿½ta kaï¿½ dosya olsun?
 
-    private int currentLevelFiles;  // Zorluk seviyesi (Dosya Sayýsý)
+    private int currentLevelFiles;  // Zorluk seviyesi (Dosya Sayï¿½sï¿½)
 
-    [Header("Görseller")]
+    [Header("Gï¿½rseller")]
     public Sprite moneyIcon;
     public Sprite companyIcon;
     public Sprite employeeIcon;
 
-    [Header("Ýsim Havuzlarý (10'ar tane)")]
+    [Header("ï¿½sim Havuzlarï¿½ (10'ar tane)")]
     public List<string> moneyNames;
     public List<string> companyNames;
     public List<string> employeeNames;
 
-    // Masadaki aktif dosya sayýsý
+    // Masadaki aktif dosya sayï¿½sï¿½
     private int activeFileCount = 0;
 
     void Awake()
     {
         if (Instance == null) Instance = this;
 
-        // Oyun ilk açýldýðýnda zorluðu baþlangýç deðerine eþitle
-        // (0 kontrolü yapýyoruz ki oyun içinde artarsa sýfýrlanmasýn)
+        // Oyun ilk aï¿½ï¿½ldï¿½ï¿½ï¿½nda zorluï¿½u baï¿½langï¿½ï¿½ deï¿½erine eï¿½itle
+        // (0 kontrolï¿½ yapï¿½yoruz ki oyun iï¿½inde artarsa sï¿½fï¿½rlanmasï¿½n)
         if (currentLevelFiles == 0) currentLevelFiles = startFileCount;
     }
 
     void OnEnable()
     {
-        SpawnFiles(); // Pencere her açýldýðýnda dosyalarý saç
+        SpawnFiles(); // Pencere her aï¿½ï¿½ldï¿½ï¿½ï¿½nda dosyalarï¿½ saï¿½
     }
 
     public void SpawnFiles()
     {
-        // 1. Önce masayý temizle (Eski çöp kalmasýn)
+        // 1. ï¿½nce masayï¿½ temizle (Eski ï¿½ï¿½p kalmasï¿½n)
         foreach (Transform child in spawnArea)
         {
             Destroy(child.gameObject);
@@ -51,20 +54,20 @@ public class MatchingManager : MonoBehaviour
         activeFileCount = 0;
         List<FileType> spawnList = new List<FileType>();
 
-        // 2. KURAL: Her türden EN AZ 1 tane kesin olsun
+        // 2. KURAL: Her tï¿½rden EN AZ 1 tane kesin olsun
         spawnList.Add(FileType.Money);
         spawnList.Add(FileType.Company);
         spawnList.Add(FileType.Employee);
 
-        // 3. KURAL: Geri kalanlarý rastgele doldur
-        // (Eðer currentLevelFiles 3'ten küçükse hata vermesin diye Math.Max kullanýyoruz)
+        // 3. KURAL: Geri kalanlarï¿½ rastgele doldur
+        // (Eï¿½er currentLevelFiles 3'ten kï¿½ï¿½ï¿½kse hata vermesin diye Math.Max kullanï¿½yoruz)
         int remainingCount = Mathf.Max(0, currentLevelFiles - 3);
         for (int i = 0; i < remainingCount; i++)
         {
             spawnList.Add((FileType)Random.Range(0, 3));
         }
 
-        // Listeyi karýþtýr (Hepsi sýrayla gelmesin)
+        // Listeyi karï¿½ï¿½tï¿½r (Hepsi sï¿½rayla gelmesin)
         ShuffleList(spawnList);
 
         // Masaya diz
@@ -76,26 +79,26 @@ public class MatchingManager : MonoBehaviour
 
     void CreateFile(FileType type)
     {
-        // HATA KONTROLÜ 1: Prefab var mý?
+        // HATA KONTROLï¿½ 1: Prefab var mï¿½?
         if (filePrefab == null)
         {
-            Debug.LogError("MatchingManager Hatasý: 'File Prefab' kutusu boþ!");
+            Debug.LogError("MatchingManager Hatasï¿½: 'File Prefab' kutusu boï¿½!");
             return;
         }
 
-        // Dosyayý yarat
+        // Dosyayï¿½ yarat
         GameObject newFile = Instantiate(filePrefab, spawnArea);
         DraggableFile script = newFile.GetComponent<DraggableFile>();
 
-        // HATA KONTROLÜ 2: Script var mý?
+        // HATA KONTROLï¿½ 2: Script var mï¿½?
         if (script == null)
         {
-            Debug.LogError("MatchingManager Hatasý: Prefabýnda 'DraggableFile' scripti yok!");
+            Debug.LogError("MatchingManager Hatasï¿½: Prefabï¿½nda 'DraggableFile' scripti yok!");
             Destroy(newFile);
             return;
         }
 
-        // Rastgele isim ve doðru ikon seç
+        // Rastgele isim ve doï¿½ru ikon seï¿½
         string randomName = "Bilinmiyor";
         Sprite correctIcon = null;
 
@@ -115,14 +118,14 @@ public class MatchingManager : MonoBehaviour
                 break;
         }
 
-        // Dosyayý Kur (Tip, Ýsim, Ýkon ve SINIR ALANI gönderiyoruz)
+        // Dosyayï¿½ Kur (Tip, ï¿½sim, ï¿½kon ve SINIR ALANI gï¿½nderiyoruz)
         script.SetupFile(type, randomName, correctIcon, appWindowBoundary);
 
-        // Rastgele Konum (SpawnArea içinde daðýt)
+        // Rastgele Konum (SpawnArea iï¿½inde daï¿½ï¿½t)
         RectTransform rt = newFile.GetComponent<RectTransform>();
         RectTransform area = spawnArea.GetComponent<RectTransform>();
 
-        // Kenarlardan biraz pay býrakarak (50px) rastgele yer seç
+        // Kenarlardan biraz pay bï¿½rakarak (50px) rastgele yer seï¿½
         float x = Random.Range(-area.rect.width / 2 + 50, area.rect.width / 2 - 50);
         float y = Random.Range(-area.rect.height / 2 + 50, area.rect.height / 2 - 50);
 
@@ -131,26 +134,27 @@ public class MatchingManager : MonoBehaviour
         activeFileCount++;
     }
 
-    // DOÐRU EÞLEÞTÝRME YAPILINCA BU ÇALIÞIR
+    // DOï¿½RU Eï¿½LEï¿½Tï¿½RME YAPILINCA BU ï¿½ALIï¿½IR
     public void CheckTaskCompletion()
     {
         activeFileCount--;
+        trueanswer.Play();
 
-        // Masadaki tüm dosyalar bitti mi?
+        // Masadaki tï¿½m dosyalar bitti mi?
         if (activeFileCount <= 0)
         {
-            Debug.Log("GÖREV TAMAMLANDI! Ödül veriliyor...");
+            Debug.Log("Gï¿½REV TAMAMLANDI! ï¿½dï¿½l veriliyor...");
 
-            // 1. GameManager'a parayý ve görevi iþlet
+            // 1. GameManager'a parayï¿½ ve gï¿½revi iï¿½let
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.CompleteMatchingTask();
             }
 
-            // 2. Zorluðu Artýr (Bir sonraki tur 1 dosya fazla gelsin)
+            // 2. Zorluï¿½u Artï¿½r (Bir sonraki tur 1 dosya fazla gelsin)
             currentLevelFiles++;
 
-            // 3. Masayý Temizle
+            // 3. Masayï¿½ Temizle
             foreach (Transform child in spawnArea)
             {
                 Destroy(child.gameObject);
@@ -161,22 +165,23 @@ public class MatchingManager : MonoBehaviour
         }
     }
 
-    // YANLIÞ EÞLEÞTÝRME YAPILINCA BU ÇALIÞIR (CEZA SÝSTEMÝ)
+    // YANLIï¿½ Eï¿½LEï¿½Tï¿½RME YAPILINCA BU ï¿½ALIï¿½IR (CEZA Sï¿½STEMï¿½)
     public void FailTask()
     {
-        Debug.Log("YANLIÞ EÞLEÞTÝRME! Ekran Kapanýyor...");
+        Debug.Log("YANLIï¿½ Eï¿½LEï¿½Tï¿½RME! Ekran Kapanï¿½yor...");
+        wronganswer.Play();
 
-        // 1. Masayý temizle
+        // 1. Masayï¿½ temizle
         foreach (Transform child in spawnArea)
         {
             Destroy(child.gameObject);
         }
 
-        // 2. Pencereyi kapat (Cezalý çýkýþ)
+        // 2. Pencereyi kapat (Cezalï¿½ ï¿½ï¿½kï¿½ï¿½)
         gameObject.SetActive(false);
     }
 
-    // Listeyi karýþtýrma fonksiyonu
+    // Listeyi karï¿½ï¿½tï¿½rma fonksiyonu
     void ShuffleList<T>(List<T> list)
     {
         for (int i = 0; i < list.Count; i++)
