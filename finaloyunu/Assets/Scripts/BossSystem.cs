@@ -30,6 +30,10 @@ public class BossManager : MonoBehaviour
 
     private int currentStrikes = 0;
 
+    [Header("Günlük Ziyaret Ayarý")]
+    public int maxDailyVisits = 3; // Boss günde kaç kere gelsin? (Motordan ayarla)
+    private int currentVisitCount = 0; // Þu an kaçýncý ziyarette? (Bunu elleme)
+
     void Start()
     {
         StartCoroutine(BossRoutine());
@@ -39,10 +43,19 @@ public class BossManager : MonoBehaviour
     {
         while (true)
         {
+
+            if (currentVisitCount >= maxDailyVisits)
+            {
+                Debug.Log("Boss bugünlük kotayý doldurdu! Artýk gelmeyecek.");
+                yield break; // Döngüyü tamamen durdurur, bir daha gelmez.
+            }
             // 1. BEKLEME
             float waitTime = Random.Range(minWaitTime, maxWaitTime);
             Debug.Log("Boss " + waitTime + " saniye bekliyor.");
             yield return new WaitForSeconds(waitTime);
+
+            currentVisitCount++;
+            Debug.Log("Boss Geliyor! Bu " + currentVisitCount + ". geliþi.");
 
             // 2. MASAYA YÜRÜME (Ýleri git = true)
             Debug.Log("Boss kontrole geliyor...");
@@ -62,6 +75,8 @@ public class BossManager : MonoBehaviour
             // 4. GERÝ DÖNME (Ýleri git = false)
             Debug.Log("Boss geri dönüyor.");
             yield return StartCoroutine(MoveToTarget(startPoint.position, false));
+
+
         }
     }
 

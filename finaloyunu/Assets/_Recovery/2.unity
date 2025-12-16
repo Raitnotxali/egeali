@@ -1929,8 +1929,8 @@ MonoBehaviour:
   startPoint: {fileID: 1630068853}
   checkPoint: {fileID: 1613080059}
   moveSpeed: 1
-  minWaitTime: 1
-  maxWaitTime: 12
+  minWaitTime: 60
+  maxWaitTime: 120
   illegalApps:
   - {fileID: 1234281646}
   - {fileID: 1651845643}
@@ -1938,6 +1938,7 @@ MonoBehaviour:
   dialogueText: {fileID: 943676808}
   penaltyAmount: 500
   maxStrikes: 3
+  maxDailyVisits: 3
 --- !u!4 &359588673
 Transform:
   m_ObjectHideFlags: 0
