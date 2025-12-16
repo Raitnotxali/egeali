@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: a26c0c07f9ffae8408c6d4669e9a0dc0
+guid: decfef3145676e3409ac2c0e751fb648
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1387437609310220190
-    second: allsloticons_0
+      213: -2462114506295253134
+    second: allsloticons 1_0
   - first:
-      213: -8838327567865123554
-    second: allsloticons_1
+      213: 353684771162477018
+    second: allsloticons 1_1
   - first:
-      213: 2572145238267613866
-    second: allsloticons_2
+      213: 6230372905294118299
+    second: allsloticons 1_2
   - first:
-      213: -6867728011538765969
-    second: allsloticons_3
+      213: 577704236630322645
+    second: allsloticons 1_3
   - first:
-      213: 7273332270610391732
-    second: allsloticons_4
+      213: 2536363373709890707
+    second: allsloticons 1_4
   - first:
-      213: 6698973098094208478
-    second: allsloticons_5
+      213: 6528167841204543832
+    second: allsloticons 1_5
+  - first:
+      213: 1373764822053843616
+    second: allsloticons 1_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: allsloticons_0
+      name: allsloticons 1_0
       rect:
         serializedVersion: 2
         x: 19
@@ -143,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9fe3fa972b214310800000000000000
-      internalID: 1387437609310220190
+      spriteID: 2776fefb6efc4ddd0800000000000000
+      internalID: -2462114506295253134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: allsloticons_1
+      name: allsloticons 1_1
       rect:
         serializedVersion: 2
         x: 349
-        y: 319
+        y: 639
         width: 282
-        height: 582
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1d6bdc87e3f75580800000000000000
-      internalID: -8838327567865123554
+      spriteID: ad1da9bec6a88e400800000000000000
+      internalID: 353684771162477018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: allsloticons_2
+      name: allsloticons 1_2
       rect:
         serializedVersion: 2
         x: 719
@@ -187,14 +190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa257a5677812b320800000000000000
-      internalID: 2572145238267613866
+      spriteID: b9d364eb52bb67650800000000000000
+      internalID: 6230372905294118299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: allsloticons_3
+      name: allsloticons 1_3
       rect:
         serializedVersion: 2
         x: 39
@@ -209,14 +212,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f676b32a2cde0b0a0800000000000000
-      internalID: -6867728011538765969
+      spriteID: 5dda69141fa640800800000000000000
+      internalID: 577704236630322645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: allsloticons_4
+      name: allsloticons 1_4
       rect:
         serializedVersion: 2
         x: 649
@@ -231,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b22e131a2110f460800000000000000
-      internalID: 7273332270610391732
+      spriteID: 3941a47dc09f23320800000000000000
+      internalID: 2536363373709890707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: allsloticons_5
+      name: allsloticons 1_5
       rect:
         serializedVersion: 2
         x: 29
@@ -253,8 +256,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed5adcf3a8887fc50800000000000000
-      internalID: 6698973098094208478
+      spriteID: 85120295016b89a50800000000000000
+      internalID: 6528167841204543832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: allsloticons 1_6
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 0
+        width: 262
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a2727fb3d7901310800000000000000
+      internalID: 1373764822053843616
       vertices: []
       indices: 
       edges: []
@@ -273,12 +298,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      allsloticons_0: 1387437609310220190
-      allsloticons_1: -8838327567865123554
-      allsloticons_2: 2572145238267613866
-      allsloticons_3: -6867728011538765969
-      allsloticons_4: 7273332270610391732
-      allsloticons_5: 6698973098094208478
+      allsloticons 1_0: -2462114506295253134
+      allsloticons 1_1: 353684771162477018
+      allsloticons 1_2: 6230372905294118299
+      allsloticons 1_3: 577704236630322645
+      allsloticons 1_4: 2536363373709890707
+      allsloticons 1_5: 6528167841204543832
+      allsloticons 1_6: 1373764822053843616
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

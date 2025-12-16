@@ -33,10 +33,10 @@ public class PhoneSystem : MonoBehaviour
         string gorevListesi = "";
 
         // Döküman Görevi (Yapılan / Hedef)
-        gorevListesi += "Dokuman: " + GameManager.Instance.writingCurrentCount + " / " + GameManager.Instance.writingDailyGoal + "\n";
+        gorevListesi += "D.Writing: " + GameManager.Instance.writingCurrentCount + " / " + GameManager.Instance.writingDailyGoal + "\n";
 
         // Eşleştirme Görevi
-        gorevListesi += "Arsivleme: " + GameManager.Instance.matchingCurrentCount + " / " + GameManager.Instance.matchingDailyGoal + "\n";
+        gorevListesi += "D.Matching: " + GameManager.Instance.matchingCurrentCount + " / " + GameManager.Instance.matchingDailyGoal + "\n";
 
   
 

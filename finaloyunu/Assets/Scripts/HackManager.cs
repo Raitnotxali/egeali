@@ -7,12 +7,13 @@ public class HackManager : MonoBehaviour
 {
     public AudioSource wronganswer;
     public AudioSource trueanswer;
+
     [Header("UI Referansları")]
     public List<HackSlot> topSlots;
     public List<HackSlot> bottomSlots;
     public Button hackButton;
 
-    // 🔥 YENİ: Kapanacak olan ana pencereyi buraya sürükleyeceğiz
+    // 🔥 Kapanacak olan ana pencere
     public GameObject hackWindow;
 
     [Header("Sonuç Görselleri (Üst Kısım)")]
@@ -26,33 +27,42 @@ public class HackManager : MonoBehaviour
 
     private int[] secretCode = new int[4];
 
+    // ✅ YENİ EKLENEN KISIM: Pencere her açıldığında burası çalışır
+    void OnEnable()
+    {
+        // UI listeleri dolu mu diye kontrol et (Hata vermemesi için)
+        if (topSlots != null && topSlots.Count > 0)
+        {
+            StartNewHack();
+        }
+    }
+
     void Start()
     {
+        // Buton bağlantıları sadece 1 kere yapılsa yeterlidir
         if (hackButton != null)
         {
             hackButton.onClick.RemoveAllListeners();
             hackButton.onClick.AddListener(CheckPassword);
         }
 
-        // Oyun açıldığında pencere referansı verilmemişse uyarı verelim
         if (hackWindow == null)
         {
-            // Eğer boş bıraktıysan, bu scriptin bağlı olduğu objeyi kapatmayı deneriz
-            // Ama en sağlıklısı Inspector'dan doldurmandır.
             hackWindow = gameObject;
         }
 
-        StartNewHack();
+        // StartNewHack()'i buradan sildik, OnEnable'a taşıdık.
     }
 
     public void StartNewHack()
     {
         GenerateSecretCode();
 
+        // Slotları sıfırla
         foreach (var slot in topSlots) slot.ResetSlot(false, spriteTopDefault);
         foreach (var slot in bottomSlots) slot.ResetSlot(true, spriteBottomDefault);
 
-        Debug.Log($"Gizli Şifre: {secretCode[0]}{secretCode[1]}{secretCode[2]}{secretCode[3]}");
+        Debug.Log($"YENİ ŞİFRE OLUŞTURULDU: {secretCode[0]}{secretCode[1]}{secretCode[2]}{secretCode[3]}");
     }
 
     void GenerateSecretCode()
@@ -68,7 +78,6 @@ public class HackManager : MonoBehaviour
 
     void CheckPassword()
     {
-        // Güvenlik: Listeler boşsa patlama
         if (topSlots == null || topSlots.Count < 4 || bottomSlots == null || bottomSlots.Count < 4) return;
 
         int[] userGuess = new int[4];
@@ -104,22 +113,20 @@ public class HackManager : MonoBehaviour
             }
         }
 
-        // --- KAZANMA DURUMU VE KAPATMA ---
+        // --- KAZANMA DURUMU ---
         if (correctCount == 4)
         {
             Debug.Log("SİSTEM HACKLENDİ! PENCERE KAPANIYOR...");
 
             if (GameManager.Instance != null) GameManager.Instance.CompleteHackTask();
 
-            // 🔥 YENİ: Pencereyi Kapat
+            // Pencereyi Kapat
             if (hackWindow != null)
             {
                 hackWindow.SetActive(false);
             }
-
             return;
         }
-        // ---------------------------------
 
         // 2. SARILARI BUL
         for (int i = 0; i < 4; i++)

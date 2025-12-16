@@ -255,15 +255,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xC7OK ZEK\u0130 B\u0130R OYUNCU OLARAK SEN, SE\xC7\u0130LM\u0130\u015E
-    OLANSIN! UZUN S\xDCREN ARA\u015ETIRMALARIMIZ SONUNDA BURAYI HER 10000000 OYUNCUDAN
-    SADECE B\u0130R\u0130N\u0130N BULAB\u0130LD\u0130\u011E\u0130N\u0130 KE\u015EFETT\u0130K.
-    VE SEN, O OYUNCUSUN. BRAVO. AFERIN. SE\xC7\u0130LM\u0130\u015E OLAN. ARTIK OF\u0130STE
-    \xC7ALI\u015EMAK ZORUNDA DE\u011E\u0130LS\u0130N. DI\u015EARI \xC7IK VE \xC7\u0130MENE
-    DOKUN. B\u0130Z, SEN\u0130N YER\u0130NE OYNARIZ."
+  m_text: AS A VERY SMART PLAYER, YOU ARE THE CHOSEN ONE! AFTER EXTENSIVE RESEARCH,
+    WE DISCOVERED THAT ONLY ONE IN EVERY 10,000,000 PLAYERS CAN FIND THIS PLACE.
+    AND YOU ARE THAT PLAYER. BRAVO. WELL DONE. THE CHOSEN ONE. YOU NO LONGER HAVE
+    TO WORK IN THE OFFICE. GO OUTSIDE AND TOUCH THE GRASS. WE'LL PLAY IN YOUR PLACE.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08c64a73108f4a2419687a263fe2c09b, type: 2}
+  m_sharedMaterial: {fileID: -341159964476672224, guid: 08c64a73108f4a2419687a263fe2c09b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -287,7 +285,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.55
+  m_fontSize: 57.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -373,8 +371,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 401}
-  m_SizeDelta: {x: 986.63, y: 183.63}
+  m_AnchoredPosition: {x: 1.4, y: 401}
+  m_SizeDelta: {x: 1827.44, y: 183.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &617921673
 MonoBehaviour:
@@ -396,10 +394,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "D\u0130KKAT: G\u0130ZL\u0130"
+  m_text: 'ATTENTION: CONFIDENTIAL'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08c64a73108f4a2419687a263fe2c09b, type: 2}
+  m_sharedMaterial: {fileID: -341159964476672224, guid: 08c64a73108f4a2419687a263fe2c09b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -423,7 +421,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
+  m_fontSize: 110.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -742,6 +740,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::eastereggscene
   buton: {fileID: 893357936}
+  level2Button: {fileID: 0}
+  level3Button: {fileID: 0}
+  level4Button: {fileID: 0}
+  level5Button: {fileID: 0}
+  hikayepanel: {fileID: 0}
+  levelpanel: {fileID: 0}
+  delete1: 0
+  time: 10
 --- !u!4 &1827538350
 Transform:
   m_ObjectHideFlags: 0

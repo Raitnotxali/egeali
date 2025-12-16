@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035, y: 356}
-  m_SizeDelta: {x: 1048.5, y: 230.34}
+  m_AnchoredPosition: {x: 14.02, y: 356}
+  m_SizeDelta: {x: 1244.83, y: 230.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &12960286
 MonoBehaviour:
@@ -176,10 +176,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TEBRIKLER!
+  m_text: CONGRATULATIONS!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08c64a73108f4a2419687a263fe2c09b, type: 2}
+  m_sharedMaterial: {fileID: -341159964476672224, guid: 08c64a73108f4a2419687a263fe2c09b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 178.9
+  m_fontSize: 105.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -791,12 +791,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bravo! Oyunu Kazand\u0131n!\nArt\u0131k ailemiz uzun bir s\xFCre boyunca
-    rahat ya\u015Fayacak!\nHepsi senin sayende!\nOynad\u0131\u011F\u0131n i\xE7in
-    te\u015Fekk\xFCrler!"
+  m_text: 'Bravo! You won the game!
+
+    Now our family will live comfortably for
+    a long time!
+
+    It''s all thanks to you!
+
+    Thank you for playing!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08c64a73108f4a2419687a263fe2c09b, type: 2}
+  m_sharedMaterial: {fileID: -341159964476672224, guid: 08c64a73108f4a2419687a263fe2c09b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -820,7 +825,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 75
+  m_fontSize: 56.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
