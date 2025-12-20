@@ -8,15 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
-    path: Assets/Scenes/0.unity
-    guid: 3d7ae60dbf59fe342a6b7f30c8f4074f
-  - enabled: 1
-    path: Assets/_Recovery/0 (1).unity
-    guid: d565879a4af9c6646813d5731fa83fff
-  - enabled: 1
-    path: Assets/_Recovery/0 (2).unity
-    guid: 57aee2e6006711841bd86825f2cb1067
   - enabled: 1
     path: Assets/Scenes/ees.unity
     guid: b890f162f44e92e44b4371734fd4c8ad
@@ -24,17 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/ees1.unity
     guid: 44ebc0bd964dd0f4faf204827b5cd91f
   - enabled: 1
-    path: Assets/_Recovery/1.unity
-    guid: dbc86d027ce4c7441bce929597901d6f
-  - enabled: 1
     path: Assets/_Recovery/2.unity
     guid: 25e7a7b014fb5e04c8be60dd4b89f453
-  - enabled: 1
-    path: Assets/_Recovery/3.unity
-    guid: 5696e35134cb3d146bb3173f9920a156
-  - enabled: 1
-    path: Assets/_Recovery/4.unity
-    guid: 24997c7ee08eebd4592795bef63d6f07
   - enabled: 1
     path: Assets/Scenes/finalscene.unity
     guid: 4e5ef60df14b55146b06e6b640f18e94
