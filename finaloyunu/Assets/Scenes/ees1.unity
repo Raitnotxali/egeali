@@ -232,7 +232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000076293945, y: -17.000008}
+  m_AnchoredPosition: {x: 0.000015258789, y: -17}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514814217
@@ -311,7 +311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.118518524, y: 0.19000001}
   m_AnchorMax: {x: 0.92300004, y: 0.78141284}
-  m_AnchoredPosition: {x: -2.169983, y: 2.2799988}
+  m_AnchoredPosition: {x: -2.1699219, y: 2.2799683}
   m_SizeDelta: {x: 3.6599731, y: 8.380005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &595220184
@@ -334,11 +334,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Our name is John. We need money to support our family, but the only job
-    we can get is a minimum-wage office job, and the money we earn isn't enough to
-    support our family. On top of that, our annoying boss is constantly checking
-    up on us! When the boss isn't checking up on us, we have to secretly do extra
-    work to earn the money our family needs. Good luck!
+  m_text: "Hello player, I am your storyteller. In the game you are about to play,
+    you will control a character named John. The company John works for pays him
+    very little and monitors him very closely. One day, a friend tells John he can
+    earn money working on the Deep Web. John can't quit his job until he earns enough
+    money, and he can't get caught by his boss. If you do both legal and illegal
+    jobs, you can save John and his family from this torment. \n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 08c64a73108f4a2419687a263fe2c09b, type: 2}
   m_sharedMaterial: {fileID: -341159964476672224, guid: 08c64a73108f4a2419687a263fe2c09b, type: 2}
@@ -365,10 +366,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 27.55
+  m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 75
   m_fontStyle: 0
@@ -722,7 +723,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7842223, y: 0.34170642}
   m_AnchorMax: {x: 0.8844814, y: 0.5478213}
-  m_AnchoredPosition: {x: 0.17999268, y: -1}
+  m_AnchoredPosition: {x: 0.18005371, y: -1}
   m_SizeDelta: {x: 3.9599915, y: 5.4799957}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692432813
@@ -1963,7 +1964,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.0100098, y: -1.5599976}
+  m_AnchoredPosition: {x: 3.0100098, y: -1.5599365}
   m_SizeDelta: {x: 9.01001, y: 9.190002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1660610070
@@ -2091,7 +2092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.047111105, y: 0}
   m_AnchorMax: {x: 0.9898149, y: 0.98600006}
-  m_AnchoredPosition: {x: 0.3300171, y: -1.7199707}
+  m_AnchoredPosition: {x: 0.32995605, y: -1.7199707}
   m_SizeDelta: {x: 2.4000244, y: 8.880005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1873977145
@@ -2415,7 +2416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 952f189359e6cf541b992a485c962da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LetterboxCamera
-  targetAspect: 1.7777778
 --- !u!1 &2078901906
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,7 +22,16 @@ EditorBuildSettings:
     guid: 4e5ef60df14b55146b06e6b640f18e94
   - enabled: 1
     path: Assets/_Recovery/0.unity
-    guid: a540eb2af41769b448ba4b76557d47f6
+    guid: 22a71f5cbef93fb449b053ab40e43ee6
+  - enabled: 1
+    path: Assets/_Recovery/1.unity
+    guid: 804ae073d22770645bf0abeb3363939b
+  - enabled: 1
+    path: Assets/_Recovery/3.unity
+    guid: ad5262c68f4edaf4983c52da39971473
+  - enabled: 1
+    path: Assets/_Recovery/4.unity
+    guid: 3fbd89bf370734545a4b6dd620a2a866
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

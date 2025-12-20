@@ -62,6 +62,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         UpdateUI();
+       
+      
+            // 1920x1080 çözünürlüğe zorla ve Tam Ekran yap (false yaparsan pencere olur)
+       Screen.SetResolution(1920, 1080, true);
+       
     }
 
     void Update()
